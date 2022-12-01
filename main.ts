@@ -1,3 +1,8 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 10) {
+        pins.servoWritePin(AnalogPin.P16, 180)
+    }
+})
 let strip = neopixel.create(DigitalPin.P13, 48, NeoPixelMode.RGB)
 radio.setGroup(7)
 strip.showColor(neopixel.colors(NeoPixelColors.White))
